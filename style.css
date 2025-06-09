@@ -1,0 +1,45 @@
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(to bottom right, #e0f7fa, #fce4ec);
+    color: #333;
+    padding: 1rem;
+    text-align: center;
+}
+h1 {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+}
+.emotions {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+}
+.emotion {
+    padding: 1rem;
+    border: none;
+    border-radius: 30px;
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
+    box-shadow: 2px 2px 10px rgba(0,0,0,0.1);
+}
+.happy { background-color: #fdd835; }
+.sad { background-color: #4fc3f7; }
+.angry { background-color: #ef5350; }
+.calm { background-color: #81c784; }
+.fear { background-color: #9575cd; }
+.love { background-color: #f06292; }
+.sos-button {
+    background-color: #ff7043;
+    padding: 1rem 2rem;
+    color: white;
+    border: none;
+    border-radius: 50px;
+    font-size: 1.2rem;
+    margin-top: 1rem;
+}
+.hidden {
+    display: none;
+}
