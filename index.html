@@ -1,61 +1,85 @@
-
 <!DOCTYPE html>
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>ALMA SOS</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Diario Integral - Sprint 1</title>
   <style>
     body {
-      font-family: 'Segoe UI', sans-serif;
-      background: linear-gradient(to bottom, #FFDEE9, #B5FFFC);
-      margin: 0;
-      padding: 0;
-      text-align: center;
-      color: #444;
+      font-family: Arial, sans-serif;
+      background-color: #f7f1f8;
+      color: #333;
+      padding: 20px;
     }
-    h1 {
-      color: #d94f70;
-      margin-top: 30px;
+    .chakra {
+      margin-top: 10px;
+      font-weight: bold;
+      color: purple;
     }
-    .chakra-button {
-      display: inline-block;
-      margin: 10px;
-      padding: 15px 20px;
+    .emotion-buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin: 20px 0;
+    }
+    button {
+      padding: 10px 15px;
       border: none;
-      border-radius: 12px;
+      border-radius: 8px;
       color: white;
       font-weight: bold;
       cursor: pointer;
     }
-    .chakra-1 { background-color: #ff0000; } /* Raíz */
-    .chakra-2 { background-color: #ff7f00; } /* Sacro */
-    .chakra-3 { background-color: #ffff00; color: #000; } /* Plexo */
-    .chakra-4 { background-color: #00ff00; } /* Corazón */
-    .chakra-5 { background-color: #0000ff; } /* Garganta */
-    .chakra-6 { background-color: #4b0082; } /* Tercer ojo */
-    .chakra-7 { background-color: #9400d3; } /* Corona */
-    .footer {
-      margin-top: 50px;
-      font-size: 0.9em;
-      color: #777;
-    }
+    .positive { background-color: #4CAF50; }
+    .negative { background-color: #F44336; }
+    #log { margin-top: 20px; }
+    .affirmation { margin-top: 20px; font-style: italic; }
   </style>
 </head>
 <body>
-  <h1>🌸 ALMA SOS - Tu espacio emocional</h1>
-  <p>Presiona el botón que representa tu emoción o necesidad del momento:</p>
+  <h1>🧘 Diario Integral - Sprint 1</h1>
+  <p>Selecciona cómo te sientes hoy:</p>
 
-  <div>
-    <button class="chakra-button chakra-1">Seguridad 🔴</button>
-    <button class="chakra-button chakra-2">Creatividad 🧡</button>
-    <button class="chakra-button chakra-3">Fuerza 💛</button>
-    <button class="chakra-button chakra-4">Amor 💚</button>
-    <button class="chakra-button chakra-5">Expresión 💙</button>
-    <button class="chakra-button chakra-6">Claridad 💜</button>
-    <button class="chakra-button chakra-7">Conexión 👑</button>
+  <div class="emotion-buttons">
+    <button class="positive" onclick="registerEmotion('Feliz')">Feliz</button>
+    <button class="positive" onclick="registerEmotion('Amado')">Amado</button>
+    <button class="positive" onclick="registerEmotion('Agradecido')">Agradecido</button>
+    <button class="negative" onclick="registerEmotion('Triste')">Triste</button>
+    <button class="negative" onclick="registerEmotion('Ansioso')">Ansioso</button>
+    <button class="negative" onclick="registerEmotion('Solo')">Solo</button>
   </div>
 
-  <p class="footer">Hecho con 🌈 por SUSURROS DEL CORAZÓN </p>
+  <div id="chakra" class="chakra"></div>
+  <div class="affirmation" id="affirmation"></div>
+  <div id="log"></div>
+
+  <script>
+    const chakraMap = {
+      'Feliz': 'Chakra Corazón 💚',
+      'Amado': 'Chakra Corazón 💖',
+      'Agradecido': 'Chakra Corona 👑',
+      'Triste': 'Chakra Garganta 💙',
+      'Ansioso': 'Chakra Plexo Solar 💛',
+      'Solo': 'Chakra Raíz ❤️',
+    };
+
+    const affirmations = {
+      'Feliz': 'Hoy mereces cada rayo de sol en tu camino.',
+      'Amado': 'El amor te rodea y te protege.',
+      'Agradecido': 'La gratitud abre puertas invisibles.',
+      'Triste': 'Tu tristeza es una semilla de sanación.',
+      'Ansioso': 'Respira. Todo está bien en este instante.',
+      'Solo': 'Nunca estás solo. El universo te acompaña.',
+    };
+
+    function registerEmotion(emotion) {
+      document.getElementById("chakra").innerText = "Energía activada: " + chakraMap[emotion];
+      document.getElementById("affirmation").innerText = affirmations[emotion];
+      const log = document.getElementById("log");
+      const entry = document.createElement("div");
+      entry.innerText = `✅ Emoción registrada: ${emotion} a las ${new Date().toLocaleTimeString()}`;
+      log.appendChild(entry);
+    }
+  </script>
 </body>
 </html>
