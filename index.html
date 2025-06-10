@@ -2,28 +2,81 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>ALMA SOS</title>
-  <link rel="stylesheet" href="style.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ALMA SOS</title>
+    <style>
+        body {
+            background: linear-gradient(135deg, #ffe6f0, #d6e6ff);
+            font-family: 'Segoe UI', sans-serif;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #ffb3c6;
+            text-align: center;
+            padding: 1rem;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        h1 {
+            margin: 0;
+            font-size: 2rem;
+            color: #fff;
+        }
+        .emotion-buttons {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin: 1rem;
+        }
+        .emotion-buttons button {
+            margin: 0.5rem;
+            padding: 1rem;
+            border: none;
+            border-radius: 10px;
+            font-size: 1rem;
+            color: #fff;
+            cursor: pointer;
+            transition: transform 0.2s ease;
+        }
+        .emotion-buttons button:hover {
+            transform: scale(1.1);
+        }
+        .chakra-1 { background-color: #ff4d4d; } /* rojo */
+        .chakra-2 { background-color: #ff944d; } /* naranja */
+        .chakra-3 { background-color: #ffe066; } /* amarillo */
+        .chakra-4 { background-color: #85e085; } /* verde */
+        .chakra-5 { background-color: #66ccff; } /* azul claro */
+        .chakra-6 { background-color: #9999ff; } /* azul índigo */
+        .chakra-7 { background-color: #d966ff; } /* violeta */
+
+        footer {
+            background-color: #ffb3c6;
+            text-align: center;
+            padding: 1rem;
+            color: #fff;
+        }
+    </style>
 </head>
 <body>
-  <div class="container">
-    <h1>ALMA SOS</h1>
-    <p>¿Cómo te sientes hoy?</p>
-    <div class="buttons">
-      <button class="emotion happy">😊 Felicidad</button>
-      <button class="emotion sad">😢 Tristeza</button>
-      <button class="emotion angry">😠 Enojo</button>
-      <button class="emotion calm">😌 Calma</button>
-      <button class="emotion love">💖 Amor</button>
-      <button class="emotion fear">😨 Miedo</button>
-    </div>
-    <button id="sosBtn">🆘 SOS</button>
-    <textarea placeholder="Escribe cómo te sientes..."></textarea>
-    <button id="graficaBtn">📊 Ver gráfica emocional</button>
-    <button id="modoAbrazo">🤗 Modo Abrazo</button>
-  </div>
-  <script src="script.js"></script>
+    <header>
+        <h1>🌟 ALMA SOS 🌟</h1>
+        <p>Conecta con tu esencia</p>
+    </header>
+
+    <section class="emotion-buttons">
+        <button class="chakra-1">😡 Ira</button>
+        <button class="chakra-2">😔 Tristeza</button>
+        <button class="chakra-3">😨 Ansiedad</button>
+        <button class="chakra-4">😊 Calma</button>
+        <button class="chakra-5">😍 Amor</button>
+        <button class="chakra-6">😌 Esperanza</button>
+        <button class="chakra-7">🧘 Inspiración</button>
+    </section>
+
+    <footer>
+        <p>Con amor para las almas sensibles 🌈</p>
+    </footer>
 </body>
 </html>
