@@ -2,41 +2,28 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ALMA SOS - Tu Refugio Interior</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>ALMA SOS</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-    <header>
-        <h1>💖 ALMA SOS</h1>
-        <p>Tu refugio interior. Estás a salvo aquí.</p>
-    </header>
-    <main>
-        <section class="emotions">
-            <button class="emotion happy">😊 Felicidad</button>
-            <button class="emotion sad">😢 Tristeza</button>
-            <button class="emotion angry">😠 Enojo</button>
-            <button class="emotion calm">😌 Calma</button>
-            <button class="emotion fear">😨 Miedo</button>
-            <button class="emotion love">❤️ Amor</button>
-        </section>
-        <section class="sos-zone">
-            <button class="sos-button">🆘 Necesito Calma</button>
-        </section>
-        <section class="hug-mode hidden">
-            <p>🫂 “No estás solo. Respira. Aquí estás a salvo.”</p>
-        </section>
-        <section class="graph">
-            <h2>📊 Tu Gráfica del Alma</h2>
-            <canvas id="emotionChart"></canvas>
-        </section>
-        <section class="diary">
-            <h2>📝 Escribe lo que sientes</h2>
-            <textarea placeholder="Hoy sentí que..."></textarea>
-            <button>Guardar Reflexión</button>
-        </section>
-    </main>
-    <script src="script.js"></script>
+  <div class="container">
+    <h1>ALMA SOS</h1>
+    <p>¿Cómo te sientes hoy?</p>
+    <div class="buttons">
+      <button class="emotion happy">😊 Felicidad</button>
+      <button class="emotion sad">😢 Tristeza</button>
+      <button class="emotion angry">😠 Enojo</button>
+      <button class="emotion calm">😌 Calma</button>
+      <button class="emotion love">💖 Amor</button>
+      <button class="emotion fear">😨 Miedo</button>
+    </div>
+    <button id="sosBtn">🆘 SOS</button>
+    <textarea placeholder="Escribe cómo te sientes..."></textarea>
+    <button id="graficaBtn">📊 Ver gráfica emocional</button>
+    <button id="modoAbrazo">🤗 Modo Abrazo</button>
+  </div>
+  <script src="script.js"></script>
 </body>
 </html>
