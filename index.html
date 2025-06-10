@@ -2,81 +2,60 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ALMA SOS</title>
-    <style>
-        body {
-            background: linear-gradient(135deg, #ffe6f0, #d6e6ff);
-            font-family: 'Segoe UI', sans-serif;
-            color: #333;
-            margin: 0;
-            padding: 0;
-        }
-        header {
-            background-color: #ffb3c6;
-            text-align: center;
-            padding: 1rem;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-        }
-        h1 {
-            margin: 0;
-            font-size: 2rem;
-            color: #fff;
-        }
-        .emotion-buttons {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            margin: 1rem;
-        }
-        .emotion-buttons button {
-            margin: 0.5rem;
-            padding: 1rem;
-            border: none;
-            border-radius: 10px;
-            font-size: 1rem;
-            color: #fff;
-            cursor: pointer;
-            transition: transform 0.2s ease;
-        }
-        .emotion-buttons button:hover {
-            transform: scale(1.1);
-        }
-        .chakra-1 { background-color: #ff4d4d; } /* rojo */
-        .chakra-2 { background-color: #ff944d; } /* naranja */
-        .chakra-3 { background-color: #ffe066; } /* amarillo */
-        .chakra-4 { background-color: #85e085; } /* verde */
-        .chakra-5 { background-color: #66ccff; } /* azul claro */
-        .chakra-6 { background-color: #9999ff; } /* azul índigo */
-        .chakra-7 { background-color: #d966ff; } /* violeta */
-
-        footer {
-            background-color: #ffb3c6;
-            text-align: center;
-            padding: 1rem;
-            color: #fff;
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ALMA SOS</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(to bottom, #FFDEE9, #B5FFFC);
+      margin: 0;
+      padding: 0;
+      text-align: center;
+      color: #444;
+    }
+    h1 {
+      color: #d94f70;
+      margin-top: 30px;
+    }
+    .chakra-button {
+      display: inline-block;
+      margin: 10px;
+      padding: 15px 20px;
+      border: none;
+      border-radius: 12px;
+      color: white;
+      font-weight: bold;
+      cursor: pointer;
+    }
+    .chakra-1 { background-color: #ff0000; } /* Raíz */
+    .chakra-2 { background-color: #ff7f00; } /* Sacro */
+    .chakra-3 { background-color: #ffff00; color: #000; } /* Plexo */
+    .chakra-4 { background-color: #00ff00; } /* Corazón */
+    .chakra-5 { background-color: #0000ff; } /* Garganta */
+    .chakra-6 { background-color: #4b0082; } /* Tercer ojo */
+    .chakra-7 { background-color: #9400d3; } /* Corona */
+    .footer {
+      margin-top: 50px;
+      font-size: 0.9em;
+      color: #777;
+    }
+  </style>
 </head>
 <body>
-    <header>
-        <h1>🌟 ALMA SOS 🌟</h1>
-        <p>Conecta con tu esencia</p>
-    </header>
+  <h1>🌸 ALMA SOS - Tu espacio emocional</h1>
+  <p>Presiona el botón que representa tu emoción o necesidad del momento:</p>
 
-    <section class="emotion-buttons">
-        <button class="chakra-1">😡 Ira</button>
-        <button class="chakra-2">😔 Tristeza</button>
-        <button class="chakra-3">😨 Ansiedad</button>
-        <button class="chakra-4">😊 Calma</button>
-        <button class="chakra-5">😍 Amor</button>
-        <button class="chakra-6">😌 Esperanza</button>
-        <button class="chakra-7">🧘 Inspiración</button>
-    </section>
+  <div>
+    <button class="chakra-button chakra-1">Seguridad 🔴</button>
+    <button class="chakra-button chakra-2">Creatividad 🧡</button>
+    <button class="chakra-button chakra-3">Fuerza 💛</button>
+    <button class="chakra-button chakra-4">Amor 💚</button>
+    <button class="chakra-button chakra-5">Expresión 💙</button>
+    <button class="chakra-button chakra-6">Claridad 💜</button>
+    <button class="chakra-button chakra-7">Conexión 👑</button>
+  </div>
 
-    <footer>
-        <p>Con amor para las almas sensibles 🌈</p>
-    </footer>
+  <p class="footer">Hecho con 🌈 por Fernando y ChatGPT</p>
 </body>
 </html>
